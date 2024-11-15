@@ -1,0 +1,192 @@
+/* 科技感主题样式 - 浅色版本 */
+.tech-container {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f7fa;
+  color: #303133;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-header {
+  margin-bottom: 24px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.tech-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #409EFF, #36cfc9);
+  border-radius: 2px;
+}
+
+.tech-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #303133;
+  text-shadow: 0 0 10px rgba(64,158,255,0.1);
+}
+
+.tech-card {
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e4e7ed;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.tech-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.tech-table {
+  background: #ffffff !important;
+  border: 1px solid #e4e7ed;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tech-table :deep(th) {
+  background-color: #f5f7fa !important;
+  color: #303133 !important;
+  border-bottom: 1px solid #e4e7ed !important;
+  font-weight: 600;
+}
+
+.tech-table :deep(td) {
+  background-color: #ffffff !important;
+  color: #606266 !important;
+  border-bottom: 1px solid #ebeef5 !important;
+}
+
+.tech-form :deep(.el-input__wrapper) {
+  background: #ffffff !important;
+  box-shadow: 0 0 0 1px #dcdfe6 !important;
+  transition: all 0.3s;
+}
+
+.tech-form :deep(.el-input__wrapper:hover) {
+  box-shadow: 0 0 0 1px #409EFF !important;
+}
+
+.tech-form :deep(.el-input__inner) {
+  color: #303133 !important;
+}
+
+.tech-button {
+  background: linear-gradient(90deg, #409EFF, #36cfc9) !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s !important;
+  color: #ffffff !important;
+}
+
+.tech-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(64,158,255,0.3);
+}
+
+.tech-filter {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e4e7ed;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* 添加动画效果 */
+.tech-fade-enter-active,
+.tech-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.tech-fade-enter-from,
+.tech-fade-leave-to {
+  opacity: 0;
+}
+
+/* 添加页面过渡效果 */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* 添加卡片动画 */
+.tech-card-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.tech-card-leave-active {
+  transition: all 0.3s ease-in;
+}
+
+.tech-card-enter-from,
+.tech-card-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* 添加悬浮效果 */
+.hover-shadow {
+  transition: all 0.3s;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 添加渐变文本效果 */
+.gradient-text {
+  background: linear-gradient(90deg, #409EFF, #36cfc9);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* 添加边框动画效果 */
+.border-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.border-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #409EFF);
+  animation: borderSlide 2s linear infinite;
+}
+
+@keyframes borderSlide {
+  0% { left: -100%; }
+  100% { left: 100%; }
+} 
